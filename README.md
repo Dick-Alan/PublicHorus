@@ -112,11 +112,6 @@ Before running the script, you **must** configure some variables within the `hor
         SELF_IP = "XXX.XXX.X.XXX"   # e.g., "192.168.1.10" (Your Computer's IP)
         ```
 
-5.  **Optional: Set `SELF_PLAYER_ID`:**
-    * If you know your character's unique 2-byte ID in the game, you can set this. It helps the minimap identify and highlight your own character. If you don't know it, you can leave it as `None`.
-        ```python
-        SELF_PLAYER_ID = None # Set YOUR 2-byte ID here if known (S2C ID Offset 22)
-        ```
 
 ### Customization Variables
 
@@ -160,22 +155,6 @@ To run PublicHorus, you **must** execute it with administrator/root privileges b
     python horus.py
     ```
 
-### Linux / macOS (Important Note)
-
-This script uses specific Windows API calls (`win32api`, `win32con`, `win32gui`) to create a transparent, topmost window. These modules are Windows-specific. Therefore, **this script will not run directly on Linux or macOS without significant modifications** to the Pygame window setup and transparency handling.
-
-If you were to adapt it for Linux/macOS (e.g., replacing `pywin32` with equivalent display management methods, if available for Pygame), you would typically run it with `sudo`:
-
-1.  Open a terminal.
-2.  Navigate to the repository directory:
-    ```bash
-    cd /path/to/PublicHorus
-    ```
-3.  Run the script:
-    ```bash
-    sudo python3 horus.py
-    ```
-    (You might need to use `python` instead of `python3` depending on your system's Python setup.)
 
 ## Usage
 
